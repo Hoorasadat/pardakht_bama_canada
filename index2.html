@@ -1,0 +1,109 @@
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="entry.css">
+    <link rel="stylesheet" href="index2.css"></link>
+
+    <title>Online Shopping Canada</title>
+</head>
+<body onload="initFunction(event)">
+
+    <header>
+        <img src="assets/logo.png" alt="logo" class="logo">
+        <p> Online Shopping Canada </p>
+    </header>
+
+    <form onsubmit="handleSubmit(event)">
+        <h3>
+            <!-- Today's rate: -->
+            <!-- <br> -->
+          : نرخ امروز
+        </h3>
+
+        <div class="calc">
+            <div class="calcdiv">
+                <label for="first_dollar_rate">
+                    <!-- Dollar rate for Cloths/ electronic devices: -->
+                    <!-- <br> -->
+                    نرخ دلار ما
+                </label>
+                <input type="text" id="first_dollar_rate"/>
+            </div>
+
+        </div>
+
+        <h4>
+            <!-- You can check the total cost of your selected item including its price and shipping cost to Iran by using this simple app: -->
+            <!-- <br> -->
+            .هزینه انحام خدمات توسط ما برابر با هزینه دلاری سرویس مورد نظر شما به اضافه مالیات احتمالی، ضربدر نرخ دلار ما میباشد
+        </h4>
+
+        <div class="calc">
+            <div class="calcdiv">
+                <label for="price">
+                    <!-- Product price: -->
+                    <!-- <br> -->
+                    هزینه سرویس
+                </label>
+                <input type="text" id="price" oninput="formatInput(this)" required/>
+            </div>
+
+            <div class="calcdiv">
+                <label class="taxLabel" >
+                    <!-- Product type: -->
+                    <!-- <br> -->
+                    مالیات
+                </label>
+                <div class="option">
+                    <div class="options">
+                        <input type="radio" id="tax" name="type" value="tax" required/>
+                        <label for="tax">
+                            <!-- Cloths/ electronic devices -->
+                            <!-- <br> -->
+                            دارد
+                        </label>
+                    </div>
+
+                    <div class="options">
+                        <input type="radio" id="notax" name="type" value="notax" required/>
+                        <label for="notax">
+                            <!-- Other stuff -->
+                            <!-- <br> -->
+                            ندارد
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calcdiv" id="taxDiv">
+                <label for="taxRate">
+                    <!-- Service taxRate: -->
+                    <!-- <br> -->
+                        درصد مالیات (بین ۵ تا ۱۳)
+                </label>
+                <input type="text" id="taxRate" oninput="formatInput(this)" required/>
+            </div>
+
+        </div>
+
+        <button onclick="calculateCost()">
+            <!-- Calculate -->
+            <!-- <br> -->
+            محاسبه
+        </button>
+        <input type="text" id="result" readonly/>
+
+    </form>
+
+    <button class="lastPiece" onclick="reset()">
+        <!-- Reset prices -->
+        <!-- <br> -->
+        محاسبه مجدد
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

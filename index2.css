@@ -1,0 +1,242 @@
+form {
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calc{
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+}
+
+.calcdiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-height: 150px;
+}
+
+#taxDiv {
+    display: none;
+}
+
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 850px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    /* header {
+        height: 60px;
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    img {
+        max-width: 60px;
+        max-height: 60px;
+    } */
+
+    .calc{
+        width: 650px;
+    }
+
+    .option input {
+        width: 50px;
+    }
+
+    button {
+        padding: 5px 10px;
+        margin: 20px 20px;
+        font-size: 15px;
+    }
+
+    input {
+        padding: 5px 10px;
+        margin: 20px 10px auto 0px;
+        width: 150px;
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 18px;
+        margin: 20px 0px auto 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        height: 50px;
+        font-size: 25px;
+        line-height: 50px;
+    }
+
+    img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .calc{
+        max-width: 480px;
+    }
+
+    .option input {
+        width: 30px;
+    }
+
+    .options {
+        height: 20px;
+    }
+
+    .taxLabel {
+        margin-top: 25px;
+    }
+
+    button {
+        padding: 5px 10px;
+        margin: 20px 20px;
+        font-size: 15px;
+    }
+
+    input {
+        padding: 5px 10px;
+        margin: 10px 10px 10px 0px;
+        width: 150px;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    label {
+        font-size: 13px;
+        margin: 10px 0px 10px 10px;
+    }
+}
+
+/* Additional styles for even smaller screens */
+@media screen and (max-width: 475px) {
+    body {
+        font-size: 10px;
+    }
+
+    header {
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .calc{
+        width: 350px;
+    }
+
+    .option input {
+        width: 20px;
+    }
+
+    .options {
+        height: 20px;
+    }
+
+    .taxLabel {
+        margin-top: 30px;
+    }
+
+    button {
+        padding: 5px 10px;
+        margin: 20px 20px;
+        font-size: 12px;
+    }
+
+    .lastPiece {
+        margin: 0px;
+    }
+
+    input {
+        padding: 5px 10px;
+        margin: 10px 10px 10px 0px;
+        width: 100px;
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 10px;
+        margin: 10px 0px 10px 10px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .calc{
+        width: 350px;
+    }
+
+    .option input {
+        width: 20px;
+    }
+
+    .small {
+        height: 20px;
+    }
+
+    .taxLabel {
+        margin-top: 25px;
+    }
+
+    button {
+        padding: 5px 10px;
+        margin: 20px 20px;
+        font-size: 12px;
+    }
+
+    .lastPiece {
+        margin-top: 0px;
+    }
+
+    input {
+        padding: 5px 10px;
+        width: 100px;
+        font-size: 15px;
+        margin: 10px 10px 10px 0px;
+    }
+
+    label {
+        font-size: 10px;
+        margin: 10px 0px 10px 10px;
+    }
+}
+

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="entry.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
+
+    <title>Hidden page</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/logo.png" alt="logo" class="logo">
+        <p> پرداخت با ما کانادا </p>
+    </header>
+
+    <form>
+        <label>
+            <!-- Enter today's rate for dollar in Toman from exchange companies -->
+            <!-- <br> -->
+            نرخ دلار روز رو از سایت صرافی کلگری بگیر و وارد کن
+            <br>
+        </label>
+
+        <input type="text" id="dollar" oninput="formatInput(this)" required/>
+        <br>
+        <br>
+        <label for="shipping_rate">
+            <!-- For seeing the dollar rate for shopping from Canada, go to the next page -->
+            <!-- <br> -->
+            برای مشاهده نرخ دلار پرداخت در کانادا به صفحه بعد برو
+            <br>
+        </label>
+
+        <button onclick="calculateRateAndRedirect()">
+            برو - Go
+        </button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
