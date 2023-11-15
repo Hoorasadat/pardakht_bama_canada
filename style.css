@@ -24,6 +24,10 @@ img {
     float: left;
 }
 
+p {
+    padding-right: 200px;
+}
+
 form {
     margin: 50px auto;
 }

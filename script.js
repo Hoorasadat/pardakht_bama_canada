@@ -1,5 +1,8 @@
+const profitRate = 0.10; // 1- percent
 
-//  Code for entry.html --------------------------------------------------------------------------------
+
+
+//  Code for index.html --------------------------------------------------------------------------------
 function calculateRateAndRedirect() {
     var dollarRate = document.getElementById("dollar").value.trim();
     dollarRate = dollarRate.replace(/,/g, ''); // Remove commas
@@ -23,7 +26,7 @@ function formatInput(input) {
 
 
 
-// Code for index.html ---------------------------------------------------------------------------------
+// Code for index2.html ---------------------------------------------------------------------------------
 
 function formatNumber(value) {
     // Remove any existing commas and non-numeric characters
@@ -39,7 +42,7 @@ function initFunction() {
     const urlParams = new URLSearchParams(window.location.search);
     const dollar = Number(urlParams.get('dollarRate'));
 
-    dollar_rate = dollarCustomRound(dollar * 1.15);
+    dollar_rate = dollarCustomRound(dollar * (1 + profitRate));
 
     document.getElementById("first_dollar_rate").value = formatNumber(dollar_rate);
 }
@@ -82,6 +85,7 @@ function calculateCost() {
     if (type == "tax")
     {
         taxDiv.style.display = 'block';
+        taxDiv.classList.add('calcdiv');
     } else
     {
         taxDiv.style.display = 'none';
